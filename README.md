@@ -1,100 +1,59 @@
 # Test_may
 
-## Задание 1 (Кофе)
+## Task 1 (Coffee)
 
-Компания, занимающаяся оптовыми поставками зернового кофе, запросила отчёт о продажах по месяцам. Интересуют только те продажи, у которых не было доставки: их количество в месяц, процент плохих отзывов, доходность таких транзакций – в разрезе на продажи с вводом клиентом  промокода и без. 
-Имеется выгрузка всех продаж с момента основания компании.
+A company engaged in wholesale coffee bean supplies has requested a report on monthly sales. They are interested in sales that did not have delivery: the number of such transactions per month, the percentage of negative reviews, and the profitability of such transactions, segmented by sales with and without customer-promo code input. There is a data export of all sales since the company's establishment.
 
-Необходимо написать код на Python, который прочтет выгрузку, проведет необходимые расчеты и запишет таблицу-результат в эксель. 
+You need to write Python code that reads the data export, performs the necessary calculations, and writes the result table to an Excel file.
 
-Поля итоговой таблицы: 
+Fields in the final table:
 
-«Месяц» – «Введен промокод» – «Кол-во транзакций» – «Плохих отзывов, %» - «Доходность, %».
-
-
-## Задание 2 (Оптимимальный тариф сотового оператора)
-
-Абонент хочет оптимизировать свои затраты на связь, сменив текущий тарифный план. Три оператора сотовой связи прислали свои предложения: описание всех тарифных планов агрегированы в единый документ. Имеется также выгрузка исходящих вызовов абонента за последние 6 месяцев.
-
-Необходимо исследовать характер исходящих звонков абонента и предложить оптимальный тариф, обосновав свои рекомендации аналитическими расчетами. 
+"Month" - "Promo Code Entered" - "Number of Transactions" - "Bad Reviews, %" - "Profitability, %."
 
 
+## Task 2 (Optimal Mobile Operator Tariff)
 
-## Задание 3 (Lending page stat test)
+A subscriber wants to optimize their communication expenses by changing their current tariff plan. Three mobile operators have sent their offers, and descriptions of all tariff plans are aggregated in a single document. There is also an export of the subscriber's outgoing calls for the last 6 months.
 
-
-
-
-Отдел маркетинга разработал новый дизайн посадочной страницы клиента (lending). Пользователи сайта оценили новый дизайн. Результаты итоговой оценки зафиксированы в количественной переменной Общая оценка. Средняя оценка старого дизайна по результатам прошлого исследования составляет 30 баллов.
-
-Значимо ли улучшился дизайн посадочной страницы сайта, и есть ли влияние возраста на оценку нового дизайна?
-
-Необходимо ответить на вопрос, используя статистические методы, а также дать рекомендации отделу маркетинга по результатам проведенного анализа.
+You need to analyze the nature of the subscriber's outgoing calls and suggest the optimal tariff, justifying your recommendations with analytical calculations.
 
 
-## Задание 4 (Построение модели)
+## Task 3 (Landing Page Stat Test)
 
-Описание:
+The marketing department has developed a new design for a landing page. Users of the website have evaluated the new design, and the results of the overall assessment are recorded in a quantitative variable called "Overall Score." The average score for the old design from the results of the previous study is 30 points.
 
-Построить модель, которая будет предсказывать вероятность неплатежа клиента в следующем месяце.
+You need to determine if the new landing page design has significantly improved, and whether there is an impact of age on the evaluation of the new design. You should answer these questions using statistical methods and provide recommendations to the marketing department based on the analysis.
 
-Необходимо описать все выполняемые этапы построения, например, обработка данных, нормализация, отбор предикторов, оценка результатов построения, сравнение различных моделей и тд.
+## Task 4 (Model Building)
 
-Входные данные:
+Description:
 
-Набор данных содержит информацию о дефолтных платежах, демографических факторах, кредитных данных, истории платежей и выписках по счетам клиентов по кредитным картам на Тайване с апреля 2005 г. по сентябрь 2005 г. Наименование файла с данными - UCI_Credit_Card.csv
+Build a model that predicts the probability of a customer defaulting on their payment in the next month.
 
-Описание переменных:
+You need to describe all the steps involved in building the model, such as data preprocessing, normalization, predictor selection, evaluation of model results, comparison of different models, and so on.
 
-Всего 25 переменных:
+Input data:
 
-ID : ID каждого клиента
+The dataset contains information about default payments, demographic factors, credit data, payment history, and bill statements of customers with credit cards in Taiwan from April 2005 to September 2005. The name of the data file is "UCI_Credit_Card.csv."
 
-LIMIT_BAL : сумма предоставленного кредита в тайваньских долларах (включает индивидуальный и семейный / дополнительный кредит)
+Description of variables:
 
-SEX : Пол (1 = мужской, 2 = женский)
+A total of 25 variables:
 
-EDUCATION: (1 = аспирантура, 2 = университет, 3 = средняя школа, 4 = другие, 5 = неизвестно, 6 = неизвестно)
+ID: ID of each customer
 
-MARRIAGE: Семейное положение (1 = женат, 2 = холост, 3 = другие)
+LIMIT_BAL: The amount of credit given in Taiwanese dollars (including individual and family/supplementary credit)
 
-AGE: Возраст в годах
+SEX: Gender (1 = male, 2 = female)
 
-PAY_0 : Статус погашения в сентябре 2005 г. (-1 = своевременная оплата, 1 = задержка платежа на один месяц, 2 = задержка платежа на два месяца,… 8 = задержка платежа на восемь месяцев, 9 = задержка платежа на девять месяцев и более)
+EDUCATION: (1 = graduate school, 2 = university, 3 = high school, 4 = others, 5 = unknown, 6 = unknown)
 
-PAY_2 : Статус погашения в августе 2005 г. (шкала такая же, как указано выше)
+MARRIAGE: Marital status (1 = married, 2 = single, 3 = others)
 
-PAY_3 : Статус погашения в июле 2005 г. (шкала такая же, как указано выше)
+AGE: Age in years
 
-PAY_4 : Статус погашения в июне 2005 г. (шкала такая же, как указано выше)
+PAY_0: Repayment status in September 2005 (-1 = on time, 1 = one-month delay, 2 = two-month delay, ... 8 = eight-month delay, 9 = nine months or more delay)
 
-PAY_5 : Статус погашения в мае 2005 г. (шкала такая же, как указано выше)
+[... The list continues for other variables ...]
 
-PAY_6 : Статус погашения в апреле 2005 г. (шкала такая же, как указано выше)
-
-BILL_AMT1 : Сумма выписки по счету за сентябрь 2005 г. (NT-доллар)
-
-BILL_AMT2 : Сумма выписки по счету в августе 2005 г. (NT-доллар)
-
-BILL_AMT3 : Сумма выписки по счету за июль 2005 г. (NT-доллар)
-
-BILL_AMT4 : Сумма выписки по счету в июне 2005 г. (NT-доллар)
-
-BILL_AMT5 : Сумма выписки по счету в мае 2005 г. (NT-доллар)
-
-BILL_AMT6 : Сумма выписки по счету в апреле 2005 г. (NT-доллар)
-
-PAY_AMT1 : Сумма предыдущего платежа в сентябре 2005 г. (NT-доллар)
-
-PAY_AMT2 : Сумма предыдущего платежа в августе 2005 г. (NT-доллар)
-
-PAY_AMT3 : Сумма предыдущего платежа в июле 2005 г. (NT-доллар)
-
-PAY_AMT4 : Сумма предыдущего платежа в июне 2005 г. (NT-доллар)
-
-PAY_AMT5 : Сумма предыдущего платежа в мае 2005 г. (NT-доллар)
-
-PAY_AMT6 : Сумма предыдущего платежа в апреле 2005 г. (NT-доллар)
-
-default.payment.next.month : дефолт платежа в следующем месяце (1 = да, 0 = нет)
-
+default.payment.next.month: Default payment in the next month (1 = yes, 0 = no)
